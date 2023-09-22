@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cart</title>
+      <!-- css file -->
+      <link rel="stylesheet" href="./style/index.css" />
+      
+      <!-- import icons -->
+      <script
+        type="module"
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+      ></script>
+      <script
+        nomodule
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+      ></script>
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body>
+    <!-- navigation -->
+   <header></header>
+
+    <!-- mainBody -->
+    <h2 id="tolItem"></h2>
+    <div class="maincont">
+
+      <div class="cartContainer">
+        <!-- append cart items -->
+      </div>
+
+      <div class="payment">
+        <h2 id="summary">Order Summary</h2>
+        <div class="flex">
+          <p>Subtotal</p>
+          <p id="AmtDiv"></p>
+        </div>
+        <div class="flex">
+          <p>Shipping charge</p>
+          <h4 style="color: rgb(9, 139, 9)">0</h4>
+        </div>
+        <div class="flex">
+          <p>TAX </p>
+          <h4 style="color: rgb(9, 139, 9)">0</h4>
+        </div>
+        <div id="tol" class="flex">
+          <h2>Total</h2>
+          <h2 id="subTol"></h2>
+        </div>
+        <a href="./checkout.html"><button>Checkout</button></a>
+       
+        <div class="flex">
+          <h4>Payment</h4>
+          <div>
+            <img src="https://www.ems.com/assets/1e17b54d.svg" alt="">
+            <img src="https://www.ems.com/assets/6db70e0b.svg" alt="">
+            <img src="https://www.ems.com/assets/e2ef118a.svg" alt="">
+            <img src="https://www.ems.com/assets/a4280dfb.svg" alt="">
+            <img src="https://www.ems.com/assets/4c78d0d1.svg" alt="">
+          </div>
+          
+        </div>
+        <div class="flex">
+          <h4>Offers</h4>
+          <p class="smallText">No cost EMI | Bank Offers</p>
+        </div>
+        <div class="flex">
+          <h4>Return</h4>
+          <p class="smallText">Easy return</p>
+        </div>
+        
+      </div>
+    </div>
+    <h3 style="line-height: 50px">Recommended for You</h3>
+    <div id="recom">
+      <img
+        src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/4901/4901809_sd.jpg;maxHeight=640;maxWidth=550"
+        alt=""
+      />
+      <img
+        src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/5200/5200904_sd.jpg;maxHeight=640;maxWidth=550"
+        alt=""
+      />
+      <img
+        src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6385/6385437_sd.jpg;maxHeight=640;maxWidth=550"
+        alt=""
+      />
+      <img
+        src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/4901/4901868_sd.jpg;maxHeight=640;maxWidth=550"
+        alt=""
+      />
+    </div>
+    <!-- footer part -->
+    <footer></footer>
+  </body>
+</html>
+
+<!-- script file -->
+<script src="./script/cart.js"></script>
+
+<script>
+  $(function () {
+      $('header').load('navbar.html');
+  }) 
+</script>
+<script>
+  $(function () {
+      $('footer').load('footer.html');
+  }) 
+</script>
+
+

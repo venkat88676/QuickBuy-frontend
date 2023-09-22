@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>products</title>
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+ 
+</head>
+<body>
+   
+         <!-- navigation -->
+        <header></header>
+       
+        <!-- mainBody -->
+        <div class="maincont">
+          <div class="filter">
+            <select onchange="getval()" id="byRating">
+              <option value="">Filter By Rating</option>
+              <option value="4.5">Above 4.5</option>
+              <option value="4">Above 4</option>
+              <option value="3.5">Above 3.5</option>
+              <option value="3">Above 3</option>
+            </select>
+            <select  onchange="getval()" id="byType">
+              <option value="">Select Type</option>
+              <option value="smartphone">Smartphones</option>
+              <option value="laptop">Laptops</option>
+              <option value="tv">Smart TV</option>
+              <option value="headphone">HeadPhones</option>
+            </select>
+          </div>
+          <div class="proContainer">
+          </div>    
+          <div ><img id="loader" class="hide" src="./images/loader3.gif" alt=""></div>  
+        </div>
+        <div class="pageNo">
+          <div onclick="get1()" id="one">1</div>
+          <div onclick="get2()" id="two">2</div>
+          <div onclick="get3()" id="three">3</div>
+          <div onclick="get4()" id="four">4</div>
+          <div onclick="get5()" id="five">5</div>
+        </div>
+          <!-- footer part -->
+        <footer></footer>
+</body>
+</html>
+
+ <!-- script file -->
+ <script src="./script/product.js"></script>
+
+<script>
+  $(function () {
+      $('header').load('navbar.html');
+  }) 
+</script>
+<script>
+  $(function () {
+      $('footer').load('footer.html');
+  }) 
+</script>
+

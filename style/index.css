@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=PT+Sans&display=swap");
+
+* {
+  font-family: "Open Sans", sans-serif;
+  margin: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.mainbody {
+    /* position: relative; */
+  margin-top: 110px;
+  /* border: solid red; */
+}
+.body1 {
+  display: flex;
+}
+#leftbody {
+  width: 50%;
+  text-align: center;
+  margin: 20px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+#leftbody img {
+  width: 600px;
+  /* border: solid red; */
+  margin-bottom: 20px;
+}
+#text {
+  font-size: 20px;
+  position: absolute;
+  margin: 65px 0px 0px 200px;
+}
+#recom {
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  display: flex;
+  margin: 10px;
+  justify-content: space-evenly;
+  padding: 10px;
+  /* width: 40%; */
+}
+#recom img {
+  width: 100px;
+  margin: 10px;
+}
+#rightdown {
+  display: flex;
+}
+#rightdown div {
+  margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  display: flex;
+}
+#rightdown img {
+  width: 285px;
+}
+#samsung {
+  display: flex;
+}
+#samsung div {
+  width: 17%;
+  position: absolute;
+  margin: 50px 20px 0px 900px;
+}
+#samsung button {
+  background-color: #0046be;
+  color: white;
+  padding: 7px;
+  border-radius: 5px;
+  border: 0px;
+  margin-top: 40px;
+}
+.sec {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px;
+}
+.sec img {
+  width: 400px;
+}
+.sec div {
+  padding: 10px;
+  margin: 5px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.sec h3 {
+  line-height: 50px;
+}
+
+/* ----------------products page ---------------*/
+#loader.hide{
+    display: none;
+}
+#loader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 40%;
+    left:50% ; 
+    width: 10%;
+    background-color: rgb(255, 255, 255);
+    z-index:1;
+}
+.maincont {
+  display: flex;
+}
+.filter {
+  /* position: fixed; */
+  padding: 10px;
+  width: 25%;
+  margin-top: 10%;
+  /* border: solid red; */
+}
+.filter select {
+  margin-top: 10px;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+  width: 90%;
+  padding: 10px;
+}
+#tolItem {
+  margin: 120px 500px 20px 20px;
+  border-bottom: solid rgba(71, 68, 68, 0.719);
+}
+.proContainer {
+  /* border: solid red; */
+  width: 65%;
+  margin-left: 5%;
+  margin-top: 10%;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  height: 1050px;
+}
+.proContainer img {
+    width: 110px;
+    height: 120px;
+  }
+  .proContainer div {
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+      rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  }
+  .proContainer button {
+    cursor: pointer;
+    width: 50%;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    margin-top: 20px;
+    background-color:#1CB3C8;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+  }
+  .proContainer button:hover{
+    background-color: transparent;
+    border: 0.5px solid black;
+    color: #000000;
+  }
+
+
+
+
+/*------------------- cart page----------------- */
+
+.flex{
+  display: flex;
+  justify-content: space-between
+}
+.smallText{
+  font-size: 14px;
+  font-weight:bold;
+  color: #0046be;
+}
+
+.cartContainer {
+    width: 65%;
+    margin-left: 5%;
+    gap: 20px;
+  }
+  .cartContainer img {
+    width: 100px;
+  }
+  .cartContainer > div {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+      rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  }
+  .cartIn button {
+    cursor: pointer;
+    background-color: #2980f3;
+    border: none;
+    color: white;
+    border-radius: 2px;
+    padding: 8px;
+    margin: 5px;
+    font-weight: bold;
+  }
+
+.payment {
+  line-height: 40px;
+  padding: 10px;
+  margin: 10px;
+  background-color: rgb(231, 235, 239);
+  margin-left: 25px;
+  width: 30%;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.payment button {
+  cursor: pointer;
+  width: 70%;
+  font-size: 18px;
+  font-weight: bolder;
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  margin: 30px 0px 30px 50px ;
+  background-color:#1CB3C8;
+  color: rgb(255, 255, 255);
+}
+.payment button:hover{
+  background-color: transparent;
+  border: solid black;
+  color: #000000;
+}
+#tol {
+  border-top: solid rgba(106, 99, 99, 0.712);
+}
+#summary {
+  border-bottom: solid rgba(106, 99, 99, 0.712);
+}
+
+/* ----------------checkout page----------->*/
+.checkout {
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  margin-top: 9%;
+  width: 40%;
+  margin-left: 35%;
+  padding: 10px;
+  margin-bottom: 5%;
+}
+.checkout input {
+  width: 95%;
+  padding: 10px;
+  margin: 10px;
+}
+.checkout select {
+  width: 90%;
+  padding: 10px;
+  margin: 10px;
+}
+.checkout button {
+  cursor: pointer;
+  width: 80%;
+  font-size: 18px;
+  font-weight: bolder;
+  color: rgb(255, 255, 255);
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 20px;
+  margin-left: 55px;
+  background-color: #ffce00;
+  color: black;
+}
+
+/* ---------pagination-----------> */
+.pageNo {
+  display: flex;
+  width: 20%;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 10px;
+  justify-content: space-evenly;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 5px;
+}
+.pageNo div {
+  cursor: pointer;
+  background-color: #ffce00;
+  /* border: solid red; */
+  font-weight: bold;
+  padding: 6px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  font-size: 25px;
+  border-radius: 5px;
+}
