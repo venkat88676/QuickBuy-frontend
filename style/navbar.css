@@ -35,7 +35,7 @@ a{
 #rightNav{
     display: flex;
     justify-content:space-evenly;
-    border: solid red;
+    /* border: solid red; */
     width: 23%;
 }
 #noOfItems{
