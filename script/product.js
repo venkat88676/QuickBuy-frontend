@@ -50,18 +50,37 @@ function getData() {
       loader.classList.add("hide");
       console.log(res);
       res.forEach((element) => {
+
         let card = document.createElement("div");
+
         let img = document.createElement("img");
         img.src = element.image;
+
+        let imgCard=document.createElement("div")
+        imgCard.setAttribute("class","imgCard")
+        imgCard.append(img)
+
         let name = document.createElement("p");
-        name.innerText = element.name;
-        let price = document.createElement("h4");
+        name.innerText = element.name.split(" ").splice(0,5).join(" ");
+
+         // sending product details to next page------->
+
+        name.addEventListener("click",()=>{
+          location.href=`./singleProduct.html?product=${JSON.stringify(element)}`
+        })
+        imgCard.addEventListener("click",()=>{
+          location.href=`./singleProduct.html?product=${JSON.stringify(element)}`
+        })
+
+        let price = document.createElement("h2");
         price.innerHTML = `₹${element.price} `;
         price.style = "color:#0275dd";
+
         let rate = document.createElement("p");
         rate.innerHTML = `${element.rating} <ion-icon style="color:#ffd700" name="star"></ion-icon>`;
+
         let btn = document.createElement("button");
-        btn.setAttribute("id", "addToCartBtn")
+        btn.setAttribute("class", "addToCartBtn")
         btn.innerText = "Add To Cart";
 
         btn.addEventListener("click", () => {
@@ -70,7 +89,7 @@ function getData() {
           addToCart(element);
         });
 
-        card.append(img, name, rate, price, btn);
+        card.append(imgCard, name, rate, price, btn);
         proContainer.append(card);
       });
     })
@@ -81,8 +100,8 @@ function getData() {
 
 getData();
 
-function addToCart() {
-  let addToCartBtn=document.getElementById("addToCartBtn")
+function addToCart(element) {
+  let addToCartBtn=document.querySelector(".addToCartBtn")
   
   const token = localStorage.getItem("token");
   if (!token) {
