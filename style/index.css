@@ -482,12 +482,12 @@ a {
     padding: 0px;
   }
   .dynamicSec{
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(2,1fr);
     /* border: solid red; */
    
   }
   .dynamicSec img{
-    width: 100px;
+    width: 80px;
   }
   .dynamicSec p{
     font-size: 15px;
@@ -505,8 +505,12 @@ a {
   .title span{
     font-size: 30px;
   }
+  .sec{
+    grid-template-columns: repeat(2,1fr);
+    gap:0px;
+  }
   .sec img{
-    width: 120px;
+    width: 100px;
   }
   .sec p{
     display: none;
