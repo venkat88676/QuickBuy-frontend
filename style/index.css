@@ -36,8 +36,8 @@ a {
   text-align: center;
 }
 .swiper-button-prev,.swiper-button-next{
-  background-color: #e1e5e7; /* Replace with your desired color */
-    color: #FFFFFF !important;
+  background-color: #e1e5e7; 
+  color: #FFFFFF !important;
   padding: 40px 20px 40px 20px;
   border-radius: 5px;
     
@@ -80,9 +80,10 @@ a {
   border: 0px;
   margin-top: 40px;
 }
+
 .dynamicSec{
   /* border: solid red; */
-  height: 300px;
+  /* height: 300px; */
  display: grid; 
  grid-template-columns: repeat(6,1fr);
  gap: 10px;
@@ -118,7 +119,7 @@ a {
 .sec {
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  gap: 10px;
+  gap: 5px;
   text-align: center;
 
 }
@@ -145,42 +146,49 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: fixed;
-    top: 40%;
-    left:50% ; 
-    width: 10%;
+    height: 500px;
     background-color: rgb(255, 255, 255);
     z-index:1;
 }
+#loader img{
+  width: 150px;
+}
 .homeLoader{
   display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 40%;
-    left:50% ; 
-    width: 10%;
-    background-color: rgb(255, 255, 255);
-    z-index:1;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  background-color: rgb(255, 255, 255);
+  z-index:1;
+}
+.homeLoader img{
+  width: 150px;
 
 }
 .maincont {
   display: flex;
 }
 .filter {
+  display: flex;
+  justify-content: space-evenly;
   /* position: fixed; */
   padding: 10px;
-  width: 25%;
+  /* width: 25%; */
   margin-top: 10%;
   /* border: solid red; */
 }
 .filter select {
-  margin-top: 10px;
+  /* margin-top: 10px; */
   font-size: large;
   font-weight: bold;
+  /* border: .3px solid black; */
   text-align: center;
-  width: 90%;
+  border-radius: 10px;
+  background-color: #dfe2e4;
+  /* width: 90%; */
   padding: 10px;
+  border: none;
+  border-bottom: solid rgb(0, 174, 255);
 }
 #tolItem {
   margin: 120px 500px 20px 20px;
@@ -188,13 +196,14 @@ a {
 }
 .proContainer {
   /* border: solid red; */
-  width: 65%;
-  margin-left: 5%;
-  margin-top: 10%;
+  width: 90%;
+  margin: auto;
+  /* margin-left: 5%; */
+  margin-top: 2%;
   display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(3, 1fr);
-  height: 1150px;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  /* height: 1150px; */
 }
 .proContainer img {
     width: 150px;
@@ -229,7 +238,7 @@ a {
 
   .proContainer button {
     cursor: pointer;
-    width: 50%;
+    width: 60%;
     font-size: 15px;
     color: rgb(255, 255, 255);
     padding: 10px;
@@ -246,24 +255,42 @@ a {
     color: #000000;
   }
 
+  /* ---------pagination-----------> */
+.pageNo {
+  display: flex;
+  width: 20%;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 10px;
+  justify-content: space-evenly;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 5px;
+}
+.pageNo div {
+  cursor: pointer;
+  background-color: #ffce00;
+  /* border: solid red; */
+  font-weight: bold;
+  padding: 6px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  font-size: 25px;
+  border-radius: 5px;
+}
+
 
 
 
 /*------------------- cart page----------------- */
 
-.flex{
-  display: flex;
-  justify-content: space-between
-}
-.smallText{
-  font-size: 14px;
-  font-weight:bold;
-  color: #0046be;
-}
+
 
 .cartContainer {
+  /* border: solid red; */
     width: 65%;
-    margin-left: 5%;
+    /* margin-left: 5%; */
     gap: 20px;
   }
   .cartContainer img {
@@ -286,6 +313,17 @@ a {
     padding: 8px;
     margin: 5px;
     font-weight: bold;
+  }
+
+  .flex{
+    display: flex;
+   
+    justify-content: space-between
+  }
+  .smallText{
+    font-size: 14px;
+    font-weight:bold;
+    color: #0046be;
   }
 
 .payment {
@@ -324,8 +362,9 @@ a {
   border-bottom: solid rgba(106, 99, 99, 0.712);
 }
 
-/* ----------------checkout page----------->*/
-.checkout {
+/* ---------------#checkout page----------->*/
+#checkout {
+  text-align: center;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   margin-top: 9%;
@@ -333,20 +372,22 @@ a {
   margin-left: 35%;
   padding: 10px;
   margin-bottom: 5%;
+ 
 }
-.checkout input {
+#checkout input {
   width: 95%;
   padding: 10px;
   margin: 10px;
 }
-.checkout select {
+#checkout select {
   width: 90%;
   padding: 10px;
   margin: 10px;
 }
-.checkout button {
+#submitCart {
   cursor: pointer;
   width: 80%;
+  margin: auto;
   font-size: 18px;
   font-weight: bolder;
   color: rgb(255, 255, 255);
@@ -354,32 +395,183 @@ a {
   border-radius: 5px;
   border: none;
   margin-top: 20px;
-  margin-left: 55px;
   background-color: #ffce00;
   color: black;
 }
-
-/* ---------pagination-----------> */
-.pageNo {
-  display: flex;
-  width: 20%;
-  margin: auto;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  padding: 10px;
-  justify-content: space-evenly;
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-  border-radius: 5px;
+#submitCart:hover{
+  background-color: transparent;
+  border: solid black;
 }
-.pageNo div {
-  cursor: pointer;
-  background-color: #ffce00;
-  /* border: solid red; */
-  font-weight: bold;
-  padding: 6px;
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-  font-size: 25px;
-  border-radius: 5px;
+
+
+
+/* ---------------media query for medium screen------------------ */
+
+@media screen and (min-width:750px) and (max-width:1200px) {
+  .swiper {
+    /* width: 100%; */
+    height: 500px; 
+  }
+  
+  .swiper-slide img{
+    text-align: center;
+    width:800px;
+    height: 500px;
+  }
+  .dynamicSec{
+    grid-template-columns: repeat(3,1fr);
+    /* border: solid red; */
+   
+  }
+  .title{
+    font-size: 25px;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  
+  }
+  .sec p{
+    display: none;
+  }
+  .sec h3{
+    line-height: normal;
+    /* text-align:start; */
+    font-size: 15px;
+  }
+  .sec img{
+    width: 200px;
+  }
+  #samsung{
+    display: none;
+  }
+  .proContainer{
+    /* border:solid red; */
+    grid-template-columns: repeat(3,1fr);
+  }
+  .proContainer img{
+    width: 120px;
+  }
+  .imgCard{
+    height: 160px;
+  }
+  #checkout {
+    width: 70%;
+    margin: auto;
+    margin-top: 15%;
+  }
+  
+  
+}
+
+
+/*----------------media query for small screen--------------------  */
+
+@media screen and (min-width:320px) and (max-width:750px) {
+  .swiper {
+    height: 320px; 
+  }
+  
+  .swiper-slide img{
+    text-align: center;
+    width:480px;
+    height: 320px;
+  }
+  .swiper-button-prev,.swiper-button-next{
+    padding: 0px;
+  }
+  .dynamicSec{
+    grid-template-columns: repeat(3,1fr);
+    /* border: solid red; */
+   
+  }
+  .dynamicSec img{
+    width: 100px;
+  }
+  .dynamicSec p{
+    font-size: 15px;
+    /* color: red; */
+  }
+  .title{
+    font-size: 25px;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  
+  }
+  .title span{
+    font-size: 30px;
+  }
+  .sec img{
+    width: 120px;
+  }
+  .sec p{
+    display: none;
+  }
+  .sec h3{
+    line-height: normal;
+    /* text-align:start; */
+    font-size: 15px;
+  }
+  #samsung{
+    display: none;
+  }
+  
+  .proContainer{
+    /* border:solid red; */
+    grid-template-columns: repeat(2,1fr);
+  }
+  .proContainer img{
+    width: 100px;
+  }
+  .imgCard{
+    height: 150px;
+  }
+  .proContainer p{
+    font-size: 10px;
+  }
+  .filter{
+    margin-top:20%;
+    margin-bottom: 40px;
+    padding: 0px;
+  }
+  .filter select{
+    padding: 5px;
+    
+  }
+  /* cart page */
+  .maincont{
+    flex-direction: column;
+  }
+  .cartContainer {
+    width: 85%;
+    margin: auto;
+  
+  }
+  .cartContainer > div{
+    flex-direction: column;
+    text-align: center;
+
+   
+  }
+  .cartContainer img{
+    margin-left: 30%;
+    width: 100px;
+    /* border:solid green; */
+  }
+  .payment{
+    width: 85%;
+    margin: auto;
+  }
+  #tolItem{
+    width: 85%;
+  }
+  #checkout {
+    width: 90%;
+    margin: auto;
+    margin-top: 20%;
+  }
 }

@@ -33,7 +33,9 @@
   margin-top: 30px;
 }
 #form-login {
+  /* border:solid red; */
   display: flex;
+  justify-content: center;
 }
 #login,
 #signin,
@@ -111,4 +113,18 @@
   margin: auto;
   margin-top: 10px;
   border-top: 0.2px solid #9c9797;
+}
+
+@media screen and (min-width:320px) and (max-width:750px) {
+  .signin-cart{
+    width: 85%;
+    margin: auto;
+  }
+  
+}
+@media screen and (min-width:750px) and (max-width:1100px) {
+  .signin-cart{
+    width: 50%;
+  }
+  
 }
