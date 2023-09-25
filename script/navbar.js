@@ -6,8 +6,10 @@ const BaseUrl=`https://dull-coveralls-fawn.cyclic.cloud`
 // get userId from url given by google auth--->
 
 let params = new URLSearchParams(window.location.search);
+
 let userId=params.get('userid');
 let token=params.get('token')
+console.log(userId,token)
 
 if(userId && token){
     fetch(`${BaseUrl}/users/getdata/?_id=${userId}`)
