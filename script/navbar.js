@@ -3,7 +3,29 @@ const BaseUrl=`https://dull-coveralls-fawn.cyclic.cloud`
 
 
 
+// get userId from url given by google auth--->
 
+let params = new URLSearchParams(window.location.search);
+
+let userId=params.get('userid');
+let token=params.get('token')
+
+
+if(userId && token){
+    fetch(`${BaseUrl}/users/getdata/?_id=${userId}`)
+    .then((res)=>{
+        return res.json()
+    })
+    .then((data)=>{
+      console.log(data.userdetails)
+      localStorage.setItem("userdetails",JSON.stringify(data.userdetails))
+      localStorage.setItem("token",token)
+        
+    })
+    .catch((err)=>{
+        console.log(err)
+    })
+}
 
 
 // -------------search function---->
@@ -50,33 +72,7 @@ noOfItems.innerText=localStorage.getItem("noOfItemInCart")||""
 
 
 // --------------show name in nav bar----->
-
-// get userId from url given by google auth--->
-
-let params = new URLSearchParams(window.location.search);
-
-let userId=params.get('userid');
-let token=params.get('token')
-console.log(userId,token)
-
-if(userId && token){
-    fetch(`${BaseUrl}/users/getdata/?_id=${userId}`)
-    .then((res)=>{
-        return res.json()
-    })
-    .then((data)=>{
-      console.log(data.userdetails)
-      localStorage.setItem("userdetails",JSON.stringify(data.userdetails))
-      localStorage.setItem("token",token)
-      checkLogin()
-    })
-    .catch((err)=>{
-        console.log(err)
-    })
-}
-else{
-  checkLogin();
-}
+const refresh=false
 
 let checkInOutBtn = document.getElementById("checkInOutBtn");
 let userDetails = document.getElementById("userDetails");
@@ -98,13 +94,10 @@ function checkLogin() {
     userDetails.style.display = "none";
     checkInOutBtn.style.display = "block";
     logoutBtn.style.display = "none";
-    
   }
 }
-// checkLogin()
 
-
-// setTimeout(checkLogin(),2000) ;
+setTimeout(checkLogin(),3000) ;
 
 
 //  -----------logout function---------------
