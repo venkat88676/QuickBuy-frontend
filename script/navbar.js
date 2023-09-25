@@ -101,7 +101,7 @@ function checkLogin() {
     
   }
 }
-checkLogin()
+// checkLogin()
 
 
 // setTimeout(checkLogin(),2000) ;
