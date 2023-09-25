@@ -89,13 +89,15 @@ function checkLogin() {
     userDetails.style.display = "block";
     logoutBtn.style.display = "block";
     usernameTag.innerText = userdetails.name.split(" ")[0];
+    location.reload();
   } else {
     userDetails.style.display = "none";
     checkInOutBtn.style.display = "block";
     logoutBtn.style.display = "none";
+    location.reload();
   }
 }
-setTimeout(checkLogin(),3000) ;
+setTimeout(checkLogin(),2000) ;
 
 
 //  -----------logout function---------------
