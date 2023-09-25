@@ -97,7 +97,8 @@ function checkLogin() {
   }
 }
 
-setTimeout(checkLogin(),3000) ;
+checkLogin()
+// setTimeout(checkLogin(),3000) ;
 
 
 //  -----------logout function---------------
