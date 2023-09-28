@@ -172,7 +172,7 @@ a {
   display: flex;
   justify-content: space-evenly;
   /* position: fixed; */
-  padding: 10px;
+  /* padding: 10px; */
   /* width: 25%; */
   margin-top: 10%;
   /* border: solid red; */
@@ -238,7 +238,7 @@ a {
 
   .proContainer button {
     cursor: pointer;
-    width: 60%;
+    width: 80%;
     font-size: 15px;
     color: rgb(255, 255, 255);
     padding: 10px;
@@ -538,12 +538,16 @@ a {
     font-size: 10px;
   }
   .filter{
+    /* fl */
+    display: block;
+    text-align: center;
     margin-top:20%;
     margin-bottom: 40px;
-    padding: 0px;
+    padding: 5px;
   }
   .filter select{
     padding: 5px;
+    margin: 5px;
     
   }
   /* cart page */
