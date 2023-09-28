@@ -23,8 +23,6 @@ productImage.append(avatar)
 
 let addToprod=document.getElementById("addToprod")
 addToprod.addEventListener("click",()=>{
-    console.log("clciked")
-    console.log(product)
     const token = localStorage.getItem("token");
     if (!token) {
       alert("Please Login First");
@@ -32,7 +30,7 @@ addToprod.addEventListener("click",()=>{
       return;
     }
  
-    addToprod.innerHTML= `<i style="color:#3592fc" class="fa fa-refresh fa-spin"></i> Adding`;
+    addToprod.innerHTML= `<i style="color:#3592fc" class="fa fa-refresh fa-spin"></i> Adding...`;
     fetch(`https://dull-coveralls-fawn.cyclic.cloud/cart/create`, {
       method: "POST",
       headers: {
